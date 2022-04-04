@@ -16,8 +16,8 @@ def encryption(text,s):
    return encryptedText
 
 text = "Davonte Littleton"
-s = 20
+shift = 20
 
-print ("Plain Text : " + text)
-print ("Cipher: " + encryption(text,s))
-
+print ("Plain Text: " + text)
+print ("Shift: " + str(shift))
+print ("Encrypted Text: " + encryption(text,shift))
