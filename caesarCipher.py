@@ -8,6 +8,8 @@ def encrypt(text,s):
       if (char.isupper()):
          result += chr((ord(char) + s-65) % 26 + 65)
       # Encrypt lowercase characters in plain text
+      elif (char == " "):
+         result += " "
       else:
          result += chr((ord(char) + s - 97) % 26 + 97)
    return result
@@ -16,5 +18,4 @@ text = "Davonte Littleton"
 s = 4
 
 print ("Plain Text : " + text)
-print ("Shift pattern : " + str(s))
 print ("Cipher: " + encrypt(text,s))
