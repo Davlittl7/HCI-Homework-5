@@ -1,21 +1,23 @@
-def encrypt(text,s):
-   result = ""
-   # transverse the plain text
+def encryption(text,s):
+   encryptedText = ""
+   # goes through the plaintext
    for i in range(len(text)):
       char = text[i]
-      # Encrypt uppercase characters in plain text
+      # First, looks to encrypt any uppercase characters in the plaintext
       
       if (char.isupper()):
-         result += chr((ord(char) + s-65) % 26 + 65)
-      # Encrypt lowercase characters in plain text
+         encryptedText += chr((ord(char) + s-65) % 26 + 65)
+      # Then, the program looks for any spaces within the text argument
       elif (char == " "):
-         result += " "
+         encryptedText += " "
+      # Finally, it looks to encrypt lowercase characters in plaintext
       else:
-         result += chr((ord(char) + s - 97) % 26 + 97)
-   return result
-#check the above function
+         encryptedText += chr((ord(char) + s - 97) % 26 + 97)
+   return encryptedText
+
 text = "Davonte Littleton"
 s = 20
 
 print ("Plain Text : " + text)
-print ("Cipher: " + encrypt(text,s))
+print ("Cipher: " + encryption(text,s))
+
