@@ -15,7 +15,7 @@ def encrypt(text,s):
    return result
 #check the above function
 text = "Davonte Littleton"
-s = 4
+s = 20
 
 print ("Plain Text : " + text)
 print ("Cipher: " + encrypt(text,s))
