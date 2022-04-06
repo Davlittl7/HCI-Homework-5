@@ -1,10 +1,11 @@
 def encryption(text,s):
    encryptedText = ""
-   # goes through the plaintext
+   
+   # goes through the plaintext in the for loop
    for i in range(len(text)):
       char = text[i]
-      # First, looks to encrypt any uppercase characters in the plaintext
       
+      # First, looks to encrypt any uppercase characters in the plaintext
       if (char.isupper()):
          encryptedText += chr((ord(char) + s-65) % 26 + 65)
       # Then, the program looks for any spaces within the text argument
